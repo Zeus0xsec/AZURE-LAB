@@ -1,7 +1,7 @@
 # Cloud Identity, Entra ID & Access Management
 
-[![PL](https://img.shields.io/badge/Język-Polski-red.svg)](#wersja-polska-pl)
-[![EN](https://img.shields.io/badge/Language-English-blue.svg)](#english-version-en)
+[![PL](https://img.shields.io/badge/Język-Polski-red.svg)](#README_PL.md)
+[![EN](https://img.shields.io/badge/Language-English-blue.svg)](#README.md)
 
 ---
 
