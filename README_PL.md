@@ -1,9 +1,9 @@
-# ☁️ Azure & Entra ID Security Lab
+# Azure & Entra ID Security Lab
 
 [![PL](https://img.shields.io/badge/Język-Polski-red.svg)](README_PL.md)
 [![EN](https://img.shields.io/badge/Language-English-blue.svg)](README.md)
 
-## 📌 O Projekcie
+## O Projekcie
 Konfiguracja i wdrożenie chmurowego środowiska tożsamości opartego na **Microsoft Azure** oraz **Microsoft Entra ID** (dawniej Azure AD). Projekt skupia się na zarządzaniu tożsamością i dostępem (IAM), kontroli wydatków w chmurze, weryfikacji uprawnień (RBAC / Least Privilege) oraz analizie logów bezpieczeństwa pod kątem zadań Helpdesk L1 i Junior SOC.
 
 ## 🛠️ Wykorzystane Technologie
@@ -14,7 +14,7 @@ Konfiguracja i wdrożenie chmurowego środowiska tożsamości opartego na **Micr
 
 ---
 
-## 🏛️ Architektura: Lokalne AD DS vs. Chmurowe Entra ID
+## Architektura: Lokalne AD DS vs. Chmurowe Entra ID
 
 | Cecha / Technologia | 🏢 Lokalnie (Active Directory DS) | ☁️ Chmura (Microsoft Entra ID) |
 | :--- | :--- | :--- |
@@ -27,7 +27,7 @@ Konfiguracja i wdrożenie chmurowego środowiska tożsamości opartego na **Micr
 
 ---
 
-## 🚀 Zrealizowane Zadania i Dowody (Screenshots)
+## Zrealizowane Zadania i Dowody (Screenshots)
 
 ### 1. Zarządzanie Kosztami (Azure Cost Management)
 Skonfigurowano sztywny budżet środowiska testowego, zapobiegając niekontrolowanym opłatom po wyczerpaniu darmowych środków.
@@ -73,5 +73,5 @@ Wygenerowano i przeanalizowano zdarzenia nieudanych logowań w dziennikach Entra
 
 ---
 
-## 🔮 Kolejne Kroki
+## Kolejne Kroki
 Kolejny etap projektu to budowa **Środowiska Hybrydowego** — połączenie tego laba chmurowego z lokalnym kontrolerem domeny Windows Server Active Directory (AD DS) przy użyciu narzędzia **Entra Connect / Cloud Sync**.
