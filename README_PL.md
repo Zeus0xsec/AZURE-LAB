@@ -34,7 +34,7 @@ Skonfigurowano sztywny budżet środowiska testowego, zapobiegając niekontrolow
 - **Kwota budżetu:** 10.00 USD
 - **Alert:** Automatyczne powiadomienie e-mail po przekroczeniu 80% limitu (8.00 USD).
 
-<img width="1000" alt="Konfiguracja Budżetu Azure" src="budget.png" />
+<img width="3436" height="1305" alt="budzety" src="https://github.com/user-attachments/assets/dce3372f-fa39-47a7-adf2-904de1671d6e" />
 
 ---
 
@@ -43,7 +43,7 @@ Skonfigurowano sztywny budżet środowiska testowego, zapobiegając niekontrolow
 - Utworzono grupy zabezpieczeń (`IT-Helpdesk`, `Sprzedaz`) do zarządzania dostępem.
 - Przeprowadzono testowe logowanie na portalu `myaccount.microsoft.com`.
 
-<img width="1000" alt="Udane pierwsze logowanie użytkownika" src="uzytkownik.jpg" />
+<img width="3435" height="1304" alt="uzytkownicy" src="https://github.com/user-attachments/assets/0ec8ad9a-be0e-4e5e-a764-8f59c378a638" />
 
 ---
 
@@ -53,9 +53,9 @@ Przetestowano granice uprawnień ról administracyjnych w celu ochrony przed nie
 - **Test 1 (Reset hasła):** **SUKCES** — Użytkownik pomyślnie zresetował hasło zwykłemu pracownikowi (`Adam Drabina`).
 - **Test 2 (Modyfikacja ról):** **BLOKADA** — Opcja edycji i dodawania ról została zablokowana przez system z powodu braku uprawnień.
 
-<img width="1000" alt="Przypisanie roli Helpdesk Administrator" src="przypisanie roli.png" />
-<img width="1000" alt="Pomyślny reset hasła przez L1" src="resethaslazkontauzytkownika.png" />
-<img width="1000" alt="Brak uprawnień do zmiany ról" src="brakuprawnien.png" />
+<img width="3439" height="1308" alt="przypisanie roli" src="https://github.com/user-attachments/assets/1f38c475-56ee-4f69-a8d0-dcb2d8531b7c" />
+<img width="3433" height="1308" alt="resethaslazkontauzytkownika" src="https://github.com/user-attachments/assets/58121f6b-81b5-441e-bb9b-db42df53977b" />
+<img width="3436" height="1310" alt="brakuprawnien" src="https://github.com/user-attachments/assets/b07195d8-f210-4db8-93ba-ddcebf0f600e" />
 
 ---
 
@@ -68,8 +68,8 @@ Wygenerowano i przeanalizowano zdarzenia nieudanych logowań w dziennikach Entra
 - **Aplikacja:** `My Profile` przez przeglądarkę Windows 10.
 - **Triaż SOC L1:** Wykryto 2 nieudane próby wprowadzenia hasła z domowego IP użytkownika. Brak oznak masowego ataku typu Password Spraying lub Brute Force. Zgłoszenie zamknięte jako błąd własny użytkownika.
 
-<img width="1000" alt="Dzienniki logowania w Entra ID" src="logowaniefailed.png" />
-<img width="1000" alt="Szczegóły błędu 50126" src="szczegolydzialan.png" />
+<img width="3436" height="1307" alt="logowaniefailed" src="https://github.com/user-attachments/assets/91e6e3fe-e188-4b6b-b998-f301c46d532a" />
+<img width="833" height="1186" alt="szczegolydzialan" src="https://github.com/user-attachments/assets/ee8364d8-e742-4205-9967-ab74977520e0" />
 
 ---
 
