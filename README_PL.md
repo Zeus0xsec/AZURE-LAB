@@ -73,5 +73,29 @@ Wygenerowano i przeanalizowano zdarzenia nieudanych logowań w dziennikach Entra
 
 ---
 
+### 5. Microsoft Sentinel i Kusto Query Language (KQL) – Konfiguracja Cloud SIEM
+Wdrożenie i konfiguracja Microsoft Sentinel powiązanego z ustawieniami diagnostycznymi Microsoft Entra ID (`AuditLogs`), co stanowi przejście od podstawowego zarządzania tożsamością do pozyskiwania i analizy logów w klasie SIEM.
+
+- **Nazwa obszaru roboczego:** `law-sentinel-v2` (Region: North Europe)
+- **Pozyskiwanie danych:** Skonfigurowano ustawienia diagnostyczne przesyłające zdarzenia audytowe Entra ID do Log Analytics.
+- **Opanowane podstawy KQL:**
+  - Filtrowanie i redukcja szumu (`where`, `Result == "success"`)
+  - Wyszukiwanie tekstowe (`has "user"`)
+  - Selekcja kolumn (`project TimeGenerated, OperationName, Identity`)
+  - Sortowanie i obsługa stref czasowych (`sort by TimeGenerated desc`, obsługa UTC)
+  - Agregacja danych i wyszukiwanie anomalii (`summarize LiczbaWydarzen = count() by OperationName`)
+
+<img width="1733" height="960" alt="newuser" src="https://github.com/user-attachments/assets/1673bcc0-866d-4bae-9cc5-8c54d06f4122" />
+<img width="3437" height="1268" alt="newuserkql" src="https://github.com/user-attachments/assets/37ff23d8-4a44-4fe6-b62e-c9f62cb02fd2" />
+<img width="3426" height="1215" alt="auditlogskql" src="https://github.com/user-attachments/assets/484b4073-0452-4639-8536-a57cfcc2d178" />
+<img width="3435" height="1219" alt="summarizekql" src="https://github.com/user-attachments/assets/f6871d7c-49c1-4fe6-8b4f-2f06405cc6cb" />
+
+---
+
 ## Kolejne Kroki
-Kolejny etap projektu to budowa **Środowiska Hybrydowego** — połączenie tego laba chmurowego z lokalnym kontrolerem domeny Windows Server Active Directory (AD DS) przy użyciu narzędzia **Entra Connect / Cloud Sync**.
+Kontynuując budowę hybrydowego środowiska SOC, kolejnym kluczowym krokiem typowo pod profil analityka L1/L2 jest przejście od samego zbierania logów do aktywnej detekcji zagrożeń i automatyzacji reakcji. 
+
+W następnej kolejności planuję:
+1. Skonfigurować i wdrożyć niestandardowe reguły detekcji (Analytics Rules) w Microsoft Sentinel, oparte na scenariuszach ataków (np. podejrzane próby logowania, nietypowa lokalizacja, modyfikacje uprawnień).
+2. Przypisać automatyczne akcje reagowania i tworzenia incydentów (Incident Management), aby opanować cykl życia zgłoszenia bezpieczeństwa od alertu do zamknięcia.
+3. Powiązać zebrane zdarzenia z chmury z lokalnym środowiskiem Active Directory z Windows Server 2025, budując pełny obraz widoczności hybrydowej (Hybrid SOC).
