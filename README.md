@@ -73,5 +73,28 @@ Simulated authentication failures to analyze security telemetry within Entra ID 
 
 ---
 
+
+### 5. Microsoft Sentinel & Kusto Query Language (KQL) - Cloud SIEM Setup
+Deployment and configuration of Microsoft Sentinel connected with Microsoft Entra ID diagnostic settings (`AuditLogs`), shifting from basic identity management to SIEM log ingestion and analysis.
+
+- **Workspace Name:** `law-sentinel-v2` (Region: North Europe)
+- **Data Ingestion:** Configured diagnostic settings to stream Entra ID audit records into Log Analytics workspace.
+- **KQL Fundamentals Mastered:**
+  - Filtering and noise reduction (`where`, `Result == "success"`)
+  - Text-based search (`has "user"`)
+  - Data projection (`project TimeGenerated, OperationName, Identity`)
+  - Sorting and time offsets (`sort by TimeGenerated desc`, UTC handling)
+  - Data aggregation and anomaly hunting (`summarize LiczbaWydarzen = count() by OperationName`)
+
+<img width="1733" height="960" alt="newuser" src="https://github.com/user-attachments/assets/7bf5b4ad-09c5-4a23-9222-88dfe8201075" />
+<img width="3437" height="1268" alt="newuserkql" src="https://github.com/user-attachments/assets/1e5fb72b-ed64-494f-8aee-b89376493db7" />
+<img width="3426" height="1215" alt="auditlogskql" src="https://github.com/user-attachments/assets/2a65e3e5-9fbc-42e8-bacc-845814cddb07" />
+<img width="3435" height="1219" alt="summarizekql" src="https://github.com/user-attachments/assets/59ed6f86-8b8c-4fd6-a783-116cca906747" />
+
+---
+
 ## Next Steps
-The next phase involves building a **Hybrid Identity Architecture** — connecting this cloud environment directly with the local Windows Server Active Directory domain using **Entra Connect / Cloud Sync**.
+The next phase involves:
+1. Configuring and deploying custom **Analytics Rules** in Microsoft Sentinel for threat detection based on attack scenarios (unusual sign-ins, privilege modifications).
+2. Implementing **Incident Management** automation to handle the triage lifecycle from alert to closure.
+3. Establishing full **Hybrid SOC** visibility by linking cloud telemetry with local Active Directory infrastructure on Windows Server 2025.
